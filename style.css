@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: hsl(4, 100%, 67%);
+  --dark: hsl(234, 29%, 20%);
+  --charcoal-gray: hsl(235, 18%, 26%);
+  --gray: hsl(231, 7%, 60%);
+  --white: #fff;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background: var(--charcoal-gray);
+}
+
+.content {
+  display: flex;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0.05px 10px 5px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+  width: 60%;
+}
+
+.content.hide {
+  /* display: none; */
+}
+
+.form-content h2 {
+  font-size: 3rem;
+  color: var(--dark);
+  margin: 1rem 0;
+}
+
+.form-content p {
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-content ul {
+  list-style-type: none;
+  margin: 1rem 0;
+}
+
+.form-content ul li {
+  margin: 0.8rem 0;
+}
+
+.form-content ul li i {
+  background: var(--primary-color);
+  color: var(--white);
+  border-radius: 50%;
+  margin: 0.5rem;
+  padding: 0.1rem;
+}
+
+.mail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-content label {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.mail p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.form-content input {
+  width: 100%;
+  outline: none;
+  margin: 0.5rem 0;
+  padding: 0.9rem 0.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid var(--dark);
+}
+
+.form-content input.active {
+  border: 1px solid var(--primary-color);
+}
+
+.form-content input.active::placeholder {
+  color: var(--primary-color);
+}
+
+.form-content button {
+  width: 100%;
+  outline: none;
+  margin: 1rem 0;
+  padding: 0.9rem 0.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  background: var(--dark);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.form-content button:active {
+  transform: scale(0.98rem);
+}
+
+.form-content button:hover {
+  background: var(--primary-color);
+}
+
+.img-con {
+  width: 40%;
+}
+
+.img-con img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* success message */
+.success-message {
+  width: 450px;
+  padding: 2rem;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0.05px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.success-message h2 {
+  color: var(--dark);
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.success-message p {
+  line-height: 1.5;
+}
+
+.success-message button {
+  width: 100%;
+  outline: none;
+  margin: 2rem 0;
+  padding: 0.9rem 0.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  background: var(--primary-color);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.success-message button:active .form-content button:active {
+  transform: scale(0.98rem);
+}
+
+.hide {
+  display: none;
+}
+
+/* media query */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column-reverse;
+    padding: 0;
+    margin: 0;
+    height: 758px;
+  }
+
+  .form-content h2 {
+    font-size: 2.4rem;
+    margin: 2rem 0;
+  }
+
+  .form-content {
+    display: flex;
+    width: 100%;
+  }
+
+  .img-con {
+    content: url("./assets/images/illustration-sign-up-mobile.svg");
+    width: 100%;
+  }
+}
